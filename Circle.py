@@ -1,6 +1,8 @@
 import math
+from interface import implements, Interface
+from Shape import Shape
 
-class Circle:
+class Circle(implements(Shape)):
 
     def __init__(self, radius :float):
         self.radius = radius   

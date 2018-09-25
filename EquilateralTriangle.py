@@ -1,7 +1,9 @@
 import math
+from interface import implements, Interface
+from Shape import Shape
 
 
-class EquilateralTriangle:
+class EquilateralTriangle(implements(Shape)):
 
     def __init__(self, length: float):
         self.length = length      

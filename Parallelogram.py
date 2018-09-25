@@ -1,7 +1,8 @@
 import math
+from interface import implements, Interface
+from Shape import Shape
 
-
-class Parallelogram:
+class Parallelogram(implements(Shape)):
 
     def __init__(self, base: float, slant: float, height: float):
         self.base = base

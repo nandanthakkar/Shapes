@@ -1,21 +1,14 @@
 import math
+from Parallelogram import Parallelogram
+from interface import implements, Interface
+from Shape import Shape
 
-class Rectangle:
+class Rectangle(Parallelogram,implements(Shape)):
 
     def __init__(self, length: float, width: float):
-        self.length = length
-        self.width = width
-
-    def get_area(self):
-        return self.length * self.width
-
-    def get_perimeter(self):
-        return 2 * (self.length + self.width)
+        super().__init__(length, width, width)
 
     def resize(self, scaling_factor: float):
-        if scaling_factor >= 0:
-            self.length, self.width = self.length * scaling_factor, self.width * scaling_factor
-        else :
-            raise ValueError("Scaling Factor cannot be negative")
-        return self.length, self.width
+        super().resize(scaling_factor)
+        return self.base, self.height
             

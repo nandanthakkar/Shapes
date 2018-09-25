@@ -1,19 +1,9 @@
 import math
+from Rectangle import Rectangle
+from interface import implements, Interface
+from Shape import Shape
 
-class Square:
+class Square(Rectangle, implements(Shape)):
 
     def __init__(self, length: float):
-        self.length = length
-
-    def get_area(self):
-        return self.length ** 2
-
-    def get_perimeter(self):
-        return 4 * self.length
-
-    def resize(self, scaling_factor: float):
-        if scaling_factor >= 0:
-            self.length = self.length * scaling_factor
-        else :
-            raise ValueError("Scaling Factor cannot be negative")
-        return self.length
+        super().__init__(length, length)

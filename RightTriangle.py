@@ -1,6 +1,8 @@
 import math
+from interface import implements, Interface
+from Shape import Shape
 
-class RightTriangle:
+class RightTriangle(implements(Shape)):
 
     def __init__(self, base: float, height: float):
         self.base = base
@@ -15,7 +17,6 @@ class RightTriangle:
         return self.base + self.height + self.hypotenus
 
     def resize(self, scaling_factor: float):
-
         if scaling_factor >= 0 :
             self.base, self.height, self.hypotenus = self.base * scaling_factor, self.height * scaling_factor, self.hypotenus * scaling_factor
         else :
